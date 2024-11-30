@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thmeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>ADV-ERP</title>
+
+<link href="./css/bootstrap.css" rel="stylesheet">
+<link href="./images/erp.ico" rel="icon" type="images/x-ico">
+</head>
+<body >
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="col-12">
+				<div th:include="~{/components/navbar.html}"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-6">
+				<!-- This Is for Content -->
+				Hii My Name IS Dhiraj
+			</div>
+			<div class="col-6">
+				<!--Contact Us Form  -->
+				
+				<div th:include="~{/components/Card.html}" class="mt-5"></div>
+			</div>
+		
+		</div>
+
+	</div>
+
+</body>
+</html>
