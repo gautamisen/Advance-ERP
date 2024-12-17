@@ -17,8 +17,7 @@ public class CityController {
 	@Autowired
 	CityRepository cityRepo;
 	
-	@Autowired
-	MyMailService mailService;
+	
 	
 	@GetMapping("/list")
 	public ResponseEntity<?> getCityList(){
@@ -28,14 +27,6 @@ public class CityController {
 	}
 	
 	
-	@PostMapping("/sendEmail")
-	public ResponseEntity<String> sendMail(@RequestBody Map<String, String> payload ){
-		String to = "sengautami930@gmail.com";
-		String subject = payload.get("subject");
-		String text = payload.get("text");
-		
-		mailService.sendMail(to, subject, text);
-		return ResponseEntity.ok().body("Email Sent...");
-	}
+	
 
 }

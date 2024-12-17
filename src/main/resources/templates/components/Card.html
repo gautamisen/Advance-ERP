@@ -2,25 +2,30 @@
 	<div class="card" style="width: 35rem;">
 		<div class="card-header text-center  mb-3">Contact Us</div>
 		<div class="card-body">
+		<form action="/sendEmail" method="post" >
+			<div th:if="${error}" th:text="${error}" class="text-center text-danger"></div>
+			<div th:if="${success}" th:text="${success}" class="text-center text-success"></div>
 			<div class="form-floating">
-				<input class="form-control" type="text" id="fullName" placeholder="" />
+				<input class="form-control" type="text" id="fullName" name="name" placeholder="" />
 				<label for="fullName">Enter Your Full name</label>
 			</div>
 			<div class="form-floating mt-3">
-				<input class="form-control" type="email" id="email" placeholder="" />
+				<input class="form-control" type="email" id="email" name = "email" placeholder="" />
 				<label for="email">Email Address</label>
 			</div>
 			<div class="form-floating mt-3">
-				<input class="form-control" type="text" id="number" placeholder="" />
+				<input class="form-control" type="text" id="number" name="number" placeholder="" />
 				<label for="number">Contact Number</label>
 			</div>
 			<div class="form-floating mt-3">
-				<textarea class="form-control" type="text" id="requirements" placeholder="" style="height: 100px;" ></textarea>
+				<textarea class="form-control" type="text" id="requirements" name ="requirements"  placeholder="" style="height: 100px;" ></textarea>
 				<label for="requirements">Tell Me Your Requirements</label>
 			</div>
-			<button class="mt-3 btn btn-primary d-grid mx-auto">
+			<button class="mt-3 btn btn-primary d-grid mx-auto" type="submit">
 				Establish Contact
 			</button>
+			
+			</form>
 			<!-- <form class="form-floating">
   <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
   <label for="floatingInputInvalid">Invalid input</label>
